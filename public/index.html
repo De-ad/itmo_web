@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <link id="page_favicon" href="data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIR8dAEJAPQC5ufAAoaHwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREAAAAAAAABERESIiIiIiEhEgAAAAAAESIiIiIiIiIiIiIRAAAAASIiIiERERESIiIiIRAAAAIiIiIRRERERCIiIiIAAAACIiIRRERERERBEiIiIAAAAiIiFERERERERBEiIiAAAAIiIkRERERERERBIiIgAAAiIiFERERERERERCIiIAAAIiIhREQ0REREREQiIiIAACIiIURERERDM0RCIiIiAAAiIiIkREMzMzREIiIiIgAAIiIiIkRDMzMzRCERESIAACERESIkRDMzNEIiREEQAAAhREEiIkREREQiJEREEgAAFEREIiIkRERCIiRERCIAAiRERCIiJEREIiIkM0RCAAIjRDMiIiJERCIiIkMzQiAAIzM0IiIiIiIiIiIkMyIAACJDMiIREiIiIRESIiIiAAACIiIhFBEiIhFEESIiIgAAACIiJEREIiIkREEiIiAAAAACIiNEMyIiJEREIiIgAAAAAiIjRDQiIiNEQiIgAAAAAAAhI0MyIiIjMzQiIAAAAAAAAiIzIiIiIkQiIgAAAAAAAAAiIiIgACIiIiIAAAAAAAAAAAIgAAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////+AAP/4AAA/8AAAD+AAAAfAAAAHwAAAB8AAAAPAAAADgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAQAAAAAAAAAAAAAAAAAAAACAAAABgAAAAcAAAAPgAAAD+AAAB/gAAAf4AAAP/AAAH/4AgD//z/P//////w==" rel="icon" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Web lab 1</title>
+    <style>
+       #header{
+    width:fit-content;
+    padding: 10px;
+    margin: auto;
+    font-style: italic;
+    color: #EC5552; 
+    font-size: 30px;
+    display: grid;
+    text-align: center;
+    border: 1px solid;
+
+}
+    #forms{
+    border: 1px solid;
+    width: fit-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #EC5552;
+    }
+    #main > div{
+        margin: 10px;
+    }
+    #submit, #reset{
+        margin: 10px;
+    }
+    #cleaner{
+        margin: 10px;
+    }
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        
+    }
+    body{
+        cursor:  url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIR8dAEJAPQC5ufAAoaHwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAREREREREREAAAAAAAABERESIiIiIiEhEgAAAAAAESIiIiIiIiIiIiIRAAAAASIiIiERERESIiIiIRAAAAIiIiIRRERERCIiIiIAAAACIiIRRERERERBEiIiIAAAAiIiFERERERERBEiIiAAAAIiIkRERERERERBIiIgAAAiIiFERERERERERCIiIAAAIiIhREQ0REREREQiIiIAACIiIURERERDM0RCIiIiAAAiIiIkREMzMzREIiIiIgAAIiIiIkRDMzMzRCERESIAACERESIkRDMzNEIiREEQAAAhREEiIkREREQiJEREEgAAFEREIiIkRERCIiRERCIAAiRERCIiJEREIiIkM0RCAAIjRDMiIiJERCIiIkMzQiAAIzM0IiIiIiIiIiIkMyIAACJDMiIREiIiIRESIiIiAAACIiIhFBEiIhFEESIiIgAAACIiJEREIiIkREEiIiAAAAACIiNEMyIiJEREIiIgAAAAAiIjRDQiIiNEQiIgAAAAAAAhI0MyIiIjMzQiIAAAAAAAAiIzIiIiIkQiIgAAAAAAAAAiIiIgACIiIiIAAAAAAAAAAAIgAAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////+AAP/4AAA/8AAAD+AAAAfAAAAHwAAAB8AAAAPAAAADgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAQAAAAAAAAAAAAAAAAAAAACAAAABgAAAAcAAAAPgAAAD+AAAB/gAAAf4AAAP/AAAH/4AgD//z/P//////w=='), auto;
+    } 
+    td, th {
+        background-color: #EC5552;
+
+        border: 1px solid #EC5552;
+        text-align: left;
+        padding: 8px;
+    }
+
+    table tr:first-child th:first-child {
+    border-top-left-radius: 6px;
+    }
+
+    /* top-right border-radius */
+    table tr:first-child th:last-child {
+    border-top-right-radius: 6px;
+    }
+
+    /* bottom-left border-radius */
+    table tr:last-child td:first-child {
+    border-bottom-left-radius: 6px;
+    }
+
+    /* bottom-right border-radius */
+    table tr:last-child td:last-child {
+    border-bottom-right-radius: 6px;
+    }
+
+  input::placeholder{
+        color: #2e3131 ;
+    }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="../src/js/clear_table.js"></script>
+    <script src="../src/js/table.js"></script>
+    <script src="../src/js/validation.js"></script>
+    <script src="../src/js/get_table.js"></script>
+
+ </head> 
+ <body style="background-color: #2f2f2f" onload="get_table()">
+
+    <!-- name and group -->
+
+    <header id="header" style="margin-bottom: 20px;">
+        <span>Кондратьева Ксения group: Р32121 var: 1408</span> 
+   </header>
+
+   <!-- Main data -->
+
+   <div class="main" style="display:flex; justify-content: center;">
+
+
+   
+    <!-- Form to send -->
+   <div>
+    <form id="forms" class="forms" onSubmit="sendRequest(); return false;" onreset="$('.Error_text').html(''); $('#dot').attr('r', '0');" >
+
+        <div class="form">
+            <div class="values">
+                    <!-- R value block -->
+                    <div class="R_value"> 
+                        <label for="R_value"> Radious: </label>
+                        <select name="R_value" size="1" id="R_value">
+                            <option value="1">1</option>
+                            <option value="2.5">1.5</option>
+                            <option value="2">2</option>
+                            <option value="2.5">2.5</option>
+                            <option value="3">3</option>
+                        </select>
+                </div>
+
+
+                <!-- X value block -->
+                <div class="X_value">
+                    <p><input type="text" name="X_value" id="X_value" placeholder="Enter X coordinate"/></p>
+                </div>
+
+                <!-- Y value block -->
+                <div class="Y_value">
+                    <p><input type="text" name="Y_value" id="Y_value" placeholder="Enter Y coordinate"/></p>
+                </div>
+            </div>
+
+            <!-- Error text block -->
+            <div class="Error_text" style="margin: 4px; display:grid;">
+                <span id="x_error"></span>
+                <span id="y_error"></span>
+                <span id="r_error"></span>
+            </div>
+
+            <!-- Buttons reset and submit block -->
+            <div class="buttons">
+                <input type ="submit" value="submit" id="submit">
+                <input type="reset" value="reset" id="reset">
+            </div>
+      </div>
+
+    </form>   
+</div> 
+<div style="margin-left: 20px;">
+     <!-- Coordinates -->
+
+     <svg width="300" height="300" style="background-color:white" xmlns="http://www.w3.org/2000/svg">
+
+        <line x1="0" x2="300" y1="150" y2="150"  stroke="black"></line>
+        <line x1="150" x2="150" y1="0" y2="300" stroke="black"></line>
+
+        <polygon points="150,0 145,15 155,15" stroke="black"></polygon>
+        <polygon points="300,150 285,145 285,155" stroke="black"></polygon>
+
+        <line x1="50" x2="50" y1="140" y2="160"></line>
+        <line x1="100" x2="100" y1="140" y2="160"></line>
+        <line x1="200" x2="200" y1="140" y2="160"></line>
+        <line x1="250" x2="250" y1="140" y2="160"></line>
+
+        <line x1="140" x2="160" y1="50" y2="50"></line>
+        <line x1="140" x2="160" y1="100" y2="100"></line>
+        <line x1="140" x2="160" y1="200" y2="200"></line>
+        <line x1="140" x2="160" y1="250" y2="250"></line>
+        <!-- Rectangle -->
+        <polygon stroke="blue" fill="blue" fill-opacity="0.3" points="150,50 150,150 200,150 200,50"></polygon>
+        <!-- Tringle -->
+        <polygon stroke="blue" fill="blue" fill-opacity="0.3" points="150,50 150,150  100,150"></polygon>
+        <!-- dots -->
+        <circle cx="150" cy="50" r="1" stroke="black" stroke-width="3" />
+        <circle cx="150" cy="100" r="1" stroke="black" stroke-width="3" />
+        <circle cx="150" cy="150" r="1" stroke="black" stroke-width="3" />
+        <circle cx="200" cy="150" r="1" stroke="black" stroke-width="3" />
+        <circle cx="100" cy="150" r="1" stroke="black" stroke-width="3" />
+        <circle cx="150" cy="200" r="1" stroke="black" stroke-width="3" />
+        <!-- Circle -->
+        <path stroke="blue" fill="blue" fill-opacity="0.3" d="M100,150 A50,50 90 0,0 150,200 L 150,150 Z"></path>
+        
+        <text x="285" y="135">X</text>
+        <text x="160" y="15">Y</text>
+
+        <text x="40" y="130">-R</text>
+        <text x="85" y="130">-R/2</text>
+        <text x="190" y="130">R/2</text>
+        <text x="245" y="130">R</text>
+
+        <text x="170" y="52.5">R</text>
+        <text x="170" y="102.5">R/2</text>
+        <text x="170" y="202.5">-R/2</text>
+        <text x="170" y="252.5">-R</text>
+        <!-- Choice dot -->
+        <circle id="dot" fill="red" color="red" r="0" cx="0" cy="0"/>
+    </svg>
+</div>
+<!-- table blocks -->
+<div style="margin-left: 20px; display: grid; justify-items: center; align-content: flex-start;">   
+    <div>
+        <table id="table">
+            <thead>
+            <tr>
+                <th>X coordinate</th>
+                <th>Y coordinate</th>
+                <th>Radious</th>
+                <th>Result</th>
+                <th>Current time</th>
+                <th>Execution time</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>  
+        <!-- Clean table block -->
+        <div id="cleaner" class="cleaner">
+                <input type="button" value="Clean" id="clear_button" onclick="cleanTable()">
+        </div>
+
+    </div>
+
+    </div>
+ </body> 
+</html>
